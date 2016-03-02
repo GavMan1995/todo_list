@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  root 'static_pages#home'
+
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.

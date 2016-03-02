@@ -1,0 +1,10 @@
+<h1>Edit List Item</h1>
+<%= form_for @post do |f| %>
+  <%= f.label :new_item %>:
+  <%= f.text_field :item %>
+
+  <%= f.label :comment %>
+  <%= f.text_field :comment %>
+
+  <%= f.submit %>
+  <% end %>

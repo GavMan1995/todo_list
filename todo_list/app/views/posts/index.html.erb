@@ -1,2 +1,21 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h1>TO DO LIST</h1>
+
+<%= form_for @post do |f| %>
+  <%= f.label :new_item %>:
+  <%= f.text_field :item %>
+
+  <%= f.label :comment %>
+  <%= f.text_field :comment %>
+
+  <%= f.submit %>
+
+<% @posts.each do |post| %>
+<ul>
+  <li><%= post.item %></li>
+</ul>
+<%= link_to 'More', post_path(post) %>
+<%= link_to 'Edit', edit_post_path(post) %>
+<%= link_to 'DONE!!', post, method: :delete %>
+<% end %>
+
+<% end %>
